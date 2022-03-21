@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: krishnachavanpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: krishnachavanpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: krishnachavanpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: krishnachavanpipelinesjavascriptdocker 
+          image: oneinsights.azurecr.io/krishnachavanpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
